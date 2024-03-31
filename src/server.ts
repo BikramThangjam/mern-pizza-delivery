@@ -1,4 +1,4 @@
-function login(username: string): string {
+function login(username: string): boolean {
     const user = {
         name: 'Vicky',
     };

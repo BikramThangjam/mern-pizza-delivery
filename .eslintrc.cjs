@@ -1,19 +1,19 @@
 /* eslint-env node */
 module.exports = {
     extends: [
-        'eslint:recommended', 
+        'eslint:recommended',
         'plugin:@typescript-eslint/recommended-type-checked',
-        'prettier'
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     parserOptions: {
         project: true,
         tsconfigRootDir: __dirname,
-      },
+    },
     root: true,
-    rules:{
-        "no-console":"error",
-        "dot-notation": "error",
-    }
-  };
+    rules: {
+        'no-console': 'error',
+        'dot-notation': 'error',
+    },
+};

@@ -1,19 +1,16 @@
 import express, { Request, Response, NextFunction } from 'express';
 import logger from './config/logger';
 import { HttpError } from 'http-errors';
-import createError from 'http-errors';
+// import createError from 'http-errors';
 
 const app = express();
 
-app.get('/', async (req, res, next) => {
-    const err = createError(
-        401,
-        'App.ts - You are not allowed to access this page',
-    );
-    // throw err;
-    return next(err);
+app.get('/', async (req, res) => {
+    // const err = createError(401,'App.ts - You are not allowed to access this page');
+    // // throw err;
+    // return next(err);
 
-    // res.send('Welcome to Auth service');
+    res.send('Welcome to Auth service');
 });
 
 // This middleware should be the last middleware in the chain

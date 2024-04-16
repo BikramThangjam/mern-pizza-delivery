@@ -1,7 +1,10 @@
+import 'reflect-metadata';
+
 import express, { Request, Response, NextFunction } from 'express';
 import logger from './config/logger';
 import { HttpError } from 'http-errors';
 // import createError from 'http-errors';
+import authRouter from './routes/auth';
 
 const app = express();
 
@@ -12,6 +15,8 @@ app.get('/', async (req, res) => {
 
     res.send('Welcome to Auth service');
 });
+
+app.use('/auth', authRouter);
 
 // This middleware should be the last middleware in the chain
 // Global middleware
